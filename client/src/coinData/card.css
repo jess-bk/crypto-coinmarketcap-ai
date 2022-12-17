@@ -1,0 +1,114 @@
+.title {
+  color: #333;
+  font-size: 34px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.error {
+  color: #666;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.coinSym {
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.coinNum {
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 96%; /* Increase the width of the container to fit six cards on one line */
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.card {
+  position: relative; /* Add position: relative to the card element */
+  width: 22%;
+  height: 220px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card:before {
+  /* Add the :before pseudo-element to the card element */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 10px;
+  color: transparent;
+  box-shadow: 0 2px 4px 0 rgba(10, 214, 44, 0.523);
+  background-color: #4ce39a; /* Set the default color to green */
+}
+
+.card.negative:before {
+  /* Override the default color for negative cards */
+  color: transparent;
+  background-color: #e62e53f9;
+  box-shadow: 0 4px 4px 0 rgb(213, 75, 75);
+}
+
+.card li {
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.li {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    width: 100%; /* Make the card take up the full width of the screen on mobile devices */
+    height: auto; /* Remove the fixed height to allow the card to adjust to its content on mobile devices */
+  }
+}
+
+/* Add a responsive layout for screens with a width between 481px and 768px */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  /* Add your tablet-specific styles here */
+  .card {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Add your desktop-specific styles here */
+  .card {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Add a responsive layout for screens with a width greater than 1024px */
+/* @media screen and (min-width: 1025px) { */
+/* Add your large desktop-specific styles here */
+/* .card {
+    width: 100%;
+    height: auto;
+  }
+} */
